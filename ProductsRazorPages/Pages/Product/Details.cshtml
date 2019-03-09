@@ -1,0 +1,35 @@
+﻿@page "{id:int}"
+@model ProductsRazorPages.Pages.Product.DetailsModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Product Details</title>
+</head>
+<body>
+    <h1>Product Details</h1>
+    <div><strong>ID:</strong></div>
+    @{ 
+        // Tag Helpers nos ayudan a crear elementos html en archivos razor, similares a HTML Helpers, no los remplazan.
+    }
+    <input asp-for="Product.ID" disabled />
+    <div><strong>Name:</strong></div>
+    <input asp-for="Product.Name" disabled />
+    <div><strong>Category:</strong></div>
+    <input asp-for="Product.Category" disabled />
+    <div><strong>Price:</strong></div>
+    <input asp-for="Product.Price" disabled />
+    <div><strong>Units in Stock:</strong></div>
+    <input asp-for="Product.UnitsInStock" disabled />
+    <br />
+    <br />
+    <a asp-page="/Product/Index">Product Lists</a>
+    <br />
+    <a asp-page="/Index">Home</a>
+</body>
+</html>
